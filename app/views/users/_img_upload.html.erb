@@ -1,11 +1,19 @@
 
 
-<%= form_for(@pic, html: {multipart: true}) do |f| %>
+<%= form_for(@user, html: {multipart: true}) do |f| %>
   <%= render 'error_messages', object: f.object %>
   
 
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </div>
 
-  <span class="picture">
+  <span class="field">
 
   <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'  %><br /><br /><br />
   </span>
@@ -13,7 +21,7 @@
 <% end %>
 <br />
 <script type="text/javascript">
-  $('#pic_picture').bind('change', function() {
+  $('#user_picture').bind('change', function() {
     size_in_megabytes = this.files[0].size/1024/1024;
     if (size_in_megabytes > 2) {
       alert('Maximum file size is 2MB. Please choose a smaller file.');
