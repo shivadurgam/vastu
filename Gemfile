@@ -51,4 +51,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 
+gem 'less-rails-bootstrap'
+gem 'therubyracer'
+gem 'twitter-bootstrap-rails'
 

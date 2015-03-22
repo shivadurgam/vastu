@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  responseCode: 1
+  responseMessage: MyString
+  xref: MyString
+  amountReceived: 1.5
+  transactionID: MyString
+  cardNumberMask: MyString
+  cardTypeCode: MyString
+  cardType: MyString
+
+two:
+  amount: 1.5
+  responseCode: 1
+  responseMessage: MyString
+  xref: MyString
+  amountReceived: 1.5
+  transactionID: MyString
+  cardNumberMask: MyString
+  cardTypeCode: MyString
+  cardType: MyString

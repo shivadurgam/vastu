@@ -1,0 +1,35 @@
+<%- model_class = Payment -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:amount) %>:</strong></dt>
+  <dd><%= @payment.amount %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:responseCode) %>:</strong></dt>
+  <dd><%= @payment.responseCode %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:responseMessage) %>:</strong></dt>
+  <dd><%= @payment.responseMessage %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:xref) %>:</strong></dt>
+  <dd><%= @payment.xref %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:amountReceived) %>:</strong></dt>
+  <dd><%= @payment.amountReceived %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:transactionID) %>:</strong></dt>
+  <dd><%= @payment.transactionID %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cardNumberMask) %>:</strong></dt>
+  <dd><%= @payment.cardNumberMask %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cardTypeCode) %>:</strong></dt>
+  <dd><%= @payment.cardTypeCode %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cardType) %>:</strong></dt>
+  <dd><%= @payment.cardType %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              payments_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_payment_path(@payment), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              payment_path(@payment),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

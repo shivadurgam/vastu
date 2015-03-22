@@ -1,0 +1,58 @@
+<%- model_class = Payment -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human %></h1>
+</div>
+
+<%= form_for @payment, :html => { :class => 'form-horizontal' } do |f| %>
+<div>
+<% if @payment.errors.any? %>
+  <div class="alert alert-error">
+    <a class="close" data-dismiss="alert">×</a>
+    <% for message in @payment.errors.full_messages %> 
+      <%= message %>
+    <% end %> 
+  </div>
+<% end %>
+</div>
+
+<div class="control-group">
+  <%= f.label :amount, 'Price', :class => 'control-label' %>
+  <div class="controls">
+    <%= f.text_field :amount, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= f.label :cardNumber,'Card Number', :class => 'control-label' %>
+  <div class="controls">
+    <%= f.text_field :cardNumber, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= f.label :cardCVV,'CVV', :class => 'control-label' %>
+  <div class="controls">
+    <%= f.text_field :cardCVV, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= f.label :cardExpiryMonth,'Expiry Month', :class => 'control-label' %>
+  <div class="controls">
+    <%= f.select(:cardExpiryMonth, options_for_select(cc_months)) %>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= f.label :cardExpiryYear,'Expiry Year', :class => 'control-label' %>
+  <div class="controls">
+    <%= f.select(:cardExpiryYear, options_for_select(cc_years)) %>
+  </div>
+</div><br /><br />
+
+<div class="form-actions">
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+              payments_path, :class => 'btn' %>
+</div>
+<% end %>

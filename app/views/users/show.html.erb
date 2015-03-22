@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-  Name: <%= @user.name %><br />
-  Email: <%= @user.email %> <br />
-  <%= image_tag @user.picture.url %><br />
+ <h3>Dear <%= @user.name %>! </h3><br /><br />
 
-<%= link_to 'Back', users_path %>
+ <h5>Please make the  <%= link_to 'Payment here', new_payment_path %></h5>
