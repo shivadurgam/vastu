@@ -1,0 +1,288 @@
+/*!
+ * Bootstrap v3.1.0 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+.site_msg
+{
+ z-index: -1;
+ position: fixed;
+ bottom: 10px;
+ right: 10px;
+ color:green;
+}
+
+.watermark {
+  position:absolute;
+  left: 400px;
+  opacity:0.1;
+  z-index: -1;
+}
+
+
+body {
+      background-image: url("compass1.jpg"), url("home1.jpg");
+      background-size: 130px 120px;      
+      background-position: 99% 1%, 1% 1%;
+      background-repeat: no-repeat;
+
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 50px;
+}
+
+header {
+  background: #FFFFCC;
+  margin-top: 30px;
+  margin-left: 140px;
+  margin-right: 140px;
+  border-radius: 10px;
+  height: 40px;
+  
+}
+
+
+
+
+header ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+
+    header ul li {
+    list-style-type: none;
+
+    display: inline-block;
+    padding: 1em 0;
+    }
+
+    header ul li a {
+    padding: 0 5px;
+    font-weight: bold;
+    }
+
+    .container {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: 200px;
+      margin-left: 140px;
+      margin-top: 60px;
+      background-color: #FFFFCC;
+      border-radius: 5px;
+      opacity: .8;
+    }
+      .flash_error1 {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 130px;
+        margin-top: 50px;
+        color: white;
+        background-color: red;
+        width: 25%;
+        border: 1px solid red;
+        border-radius: 8px;
+    }
+    
+
+    .signup_container {
+      background-color: #f7f7f7;
+
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 50px;
+      padding: 10px;
+      border-radius: 10px;
+
+    }
+
+      table, td, th {
+    border: 2px solid black;
+    text-align: center;
+    }
+    table {
+     border-spacing: 0;
+     border-collapse: collapse;
+     }
+
+    th {
+        background-color: #f7f7f7;
+        color: black;
+    }
+
+    td,th {
+      padding: 10px;
+    }
+
+    div.tab {
+      border: 1px solid green;
+      left: 50px;
+      height: 250px;
+      width: 250px;
+
+      text-align: left;
+      background-color: cyan;
+        color: black;
+
+    }
+    .flash_msg {
+        color: green;
+        text-align: center;
+        font-weight: bold; 
+
+    }
+
+
+
+    .flash_success1 {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 130px;
+        margin-top: 50px;
+        color: white;
+        background-color: green;
+        width: 25%;
+        border: 1px solid green;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    .flash_success {
+        padding: 5px;
+        margin-left: 130px;
+        margin-top: 50px;
+        color: black;
+        background-color: #DAEACA;
+        height:30px;
+        width: 50%;
+        
+        
+      
+    }
+
+    .flash_error {
+        color: red;
+        text-align: center;
+        font-weight: bold;
+        
+    }
+    .site_maintenance{
+        margin-top: 50px;
+        margin-right: 100px;
+        float: right;
+        color: green;
+        background-color: white;
+        width: 10%;
+        border: 1px solid green;
+        padding: 5px;
+        border-radius: 8px;
+
+    }
+
+    .user-status{
+      float:right;
+      margin-right: 5px;
+      margin-top: 10px;
+      color:#5B677D;
+      background-color:white ;
+      padding: 3px;
+      width: 70px;
+      text-align: center;
+      font-family: Phosphate;
+      border: 2px solid #5B677D;
+
+
+    }
+
+    .btn-post {
+
+        color: white;
+        background-color: #428bca;
+        height: 5%;
+        width: 85%;
+        padding: 5px;
+        border-radius: 5px;
+
+    }
+
+    .feed-box{
+      background-color: #f7f7f7;
+
+    }
+
+
+
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+
+.pretty th .desc {
+  background-image: url(/images/down_arrow.gif);
+}
+
+  .table_profile{
+
+
+  }
+
+
+  .user_info {
+    background-color:white;
+    color:#4D4D94;
+    width:60%; 
+    border: 2px solid #4D4D94; 
+    border-radius: 10px; 
+    padding:5px; 
+    text-align:center
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+
+
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+a {
+  
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}

@@ -1,0 +1,3 @@
+== README
+
+Basic form created for user details such as name, email. It includes carrierwave gem for picture uploading.
