@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  resources :payments
 
+
+  get    'static_pages/home'  => 'static_pages#home', as: :static_home
+  get 'static_pages/contact'
+
+  get    'signup'  => 'users#new',            :as => :signup
+  get    'signin'  => "sessions#new",         :as => :signin
+  get    'signout' => 'sessions#destroy',     :as => :signout
+  get    'aboutus' => 'pics#aboutus',         :as => :aboutus
+  resources :payments
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+  resources :pics
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

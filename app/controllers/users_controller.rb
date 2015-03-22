@@ -1,16 +1,21 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authenticate, only: [:show, :edit, :update]
+  before_filter :correct_user, only: [:edit, :update]
   # GET /users
   # GET /users.json
   def index
     @users = User.all
     @user = User.new
+
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @pic = current_user.pics.build if signed_in?
+
   end
 
   # GET /users/new
@@ -70,6 +75,18 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :picture)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
+
+    def authenticate
+      deny_access unless signed_in?
+    end
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to root_path, :flash => {:error1 => "You have no access to this information!!"} unless current_user?(@user)  # current_user? method defined in sessions_helper
+    end
+
+   
+
 end

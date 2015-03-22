@@ -1,0 +1,16 @@
+<% provide(:title, 'Signin') %>
+
+<h3> Please sign in below </h3> <br /> <br />
+<%= form_for(:session, url: sessions_path) do | f | %>
+
+	<%= f.label :email %>
+	<%= f.email_field :email, placeholder: "minimum 4 characters"%></br></br>
+	<%= f.label :password %>
+	<%= f.password_field :password, placeholder: "minimum 4 characters"%></br></br>
+	<%= f.submit 'Sign in' %>
+
+<% end %>
+
+<br />
+<br />
+For Signing up, please <%= link_to 'Click here', new_user_path %>

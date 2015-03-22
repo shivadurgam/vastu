@@ -1,0 +1,15 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+    <h5>Please upload the picture here</h5>
+ 
+      <section class="micropost_form">
+        <%= render 'shared/img_upload' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  
+
+  <%= link_to 'users', users_path %>
+<% end %>

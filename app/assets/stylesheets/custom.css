@@ -201,13 +201,13 @@ header ul{
       float:right;
       margin-right: 5px;
       margin-top: 10px;
-      color:#5B677D;
-      background-color:white ;
+      color:black;
+      background-color:white;
       padding: 3px;
       width: 70px;
       text-align: center;
-      font-family: Phosphate;
-      border: 2px solid #5B677D;
+      font-family: Times;
+      border: 2px solid black;
 
 
     }
